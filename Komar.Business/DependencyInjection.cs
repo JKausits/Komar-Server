@@ -13,6 +13,7 @@ namespace Komar.Business
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddTransient<ICategoryBusiness, CategoryBusiness>();
+            services.AddTransient<IBrandBusiness, BrandBusiness>();
             return services;
         }
     }

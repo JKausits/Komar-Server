@@ -16,6 +16,7 @@ namespace Komar.DataAccess
 
         #region Db Sets
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Brand> Brands { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Komar.Shared.Dtos.Brand;
 using Komar.Shared.Dtos.Category;
 using Komar.Shared.Entities;
 
@@ -9,12 +10,19 @@ namespace Komar.Business
         public MappingProfiles()
         {
             CategoryProfile();
+            BrandProfile();
         }
 
         private void CategoryProfile()
         {
             CreateMap<CategoryFormDto, Category>();
             CreateMap<Category, CategoryDto>();
+        }
+
+        private void BrandProfile()
+        {
+            CreateMap<BrandFormDto, Brand>();
+            CreateMap<Brand, BrandDto>();
         }
     }
 }

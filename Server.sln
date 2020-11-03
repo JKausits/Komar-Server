@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Komar.API", "Komar.API\Komar.API.csproj", "{717A8908-BF17-41CF-8791-4C2D16EC47B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Komar.Business", "Komar.Business\Komar.Business.csproj", "{87C5191D-31C9-4F04-9D3A-67B31CCBBCD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Komar.Business", "Komar.Business\Komar.Business.csproj", "{87C5191D-31C9-4F04-9D3A-67B31CCBBCD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Komar.DataAccess", "Komar.DataAccess\Komar.DataAccess.csproj", "{7E84D4CD-A5C9-45B5-94CA-8D76B352AB95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Komar.DataAccess", "Komar.DataAccess\Komar.DataAccess.csproj", "{7E84D4CD-A5C9-45B5-94CA-8D76B352AB95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Komar.Shared", "Komar.Shared\Komar.Shared.csproj", "{92D6CF0B-7A91-45FD-BADC-3B2937D4B35F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Komar.Shared", "Komar.Shared\Komar.Shared.csproj", "{92D6CF0B-7A91-45FD-BADC-3B2937D4B35F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
