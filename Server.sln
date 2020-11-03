@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Komar.API", "Komar.API\Komar.API.csproj", "{717A8908-BF17-41CF-8791-4C2D16EC47B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Komar.Business", "Komar.Business\Komar.Business.csproj", "{87C5191D-31C9-4F04-9D3A-67B31CCBBCD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Komar.DataAccess", "Komar.DataAccess\Komar.DataAccess.csproj", "{7E84D4CD-A5C9-45B5-94CA-8D76B352AB95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Komar.Shared", "Komar.Shared\Komar.Shared.csproj", "{92D6CF0B-7A91-45FD-BADC-3B2937D4B35F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{717A8908-BF17-41CF-8791-4C2D16EC47B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717A8908-BF17-41CF-8791-4C2D16EC47B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717A8908-BF17-41CF-8791-4C2D16EC47B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717A8908-BF17-41CF-8791-4C2D16EC47B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87C5191D-31C9-4F04-9D3A-67B31CCBBCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87C5191D-31C9-4F04-9D3A-67B31CCBBCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87C5191D-31C9-4F04-9D3A-67B31CCBBCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87C5191D-31C9-4F04-9D3A-67B31CCBBCD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E84D4CD-A5C9-45B5-94CA-8D76B352AB95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E84D4CD-A5C9-45B5-94CA-8D76B352AB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E84D4CD-A5C9-45B5-94CA-8D76B352AB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E84D4CD-A5C9-45B5-94CA-8D76B352AB95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D6CF0B-7A91-45FD-BADC-3B2937D4B35F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D6CF0B-7A91-45FD-BADC-3B2937D4B35F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D6CF0B-7A91-45FD-BADC-3B2937D4B35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D6CF0B-7A91-45FD-BADC-3B2937D4B35F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A77F35E6-5C63-47E2-AF3E-57DFBB08ADBC}
+	EndGlobalSection
+EndGlobal
