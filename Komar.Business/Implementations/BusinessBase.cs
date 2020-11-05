@@ -63,9 +63,14 @@ namespace Komar.Business.Implementations
         public async Task<T> FindAsync(int id)
         {
             var entity = await Set.FindAsync(id);
-            if (entity == null)
-                throw new NotFoundException(EntityName, id);
+            CheckNotFound(entity, id);
             return entity;
+        }
+
+        public void CheckNotFound(object obj, int id)
+        {
+            if(obj == null)
+                throw new NotFoundException(EntityName, id);
         }
     }
 }
