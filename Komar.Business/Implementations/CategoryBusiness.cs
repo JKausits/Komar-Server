@@ -58,17 +58,5 @@ namespace Komar.Business.Implementations
                 return null;
             }
         }
-
-
-        #region Private
-        private void HandleDuplicateNameException(DbUpdateException ex, string name)
-        {
-            var inner = ex.InnerException as MySql.Data.MySqlClient.MySqlException;
-            if (inner.Number == 1062)     
-                throw new BadRequestException($"Category with name \"{name}\" already exists.");
-            
-            throw ex;
-        }
-        #endregion
     }
 }

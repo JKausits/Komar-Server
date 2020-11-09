@@ -15,6 +15,7 @@ namespace Komar.Business
             services.AddTransient<ICategoryBusiness, CategoryBusiness>();
             services.AddTransient<IBrandBusiness, BrandBusiness>();
             services.AddTransient<IMaterialBusiness, MaterialBusiness>();
+            services.AddTransient<IEmployeeTypeBusiness, EmployeeTypeBusiness>();
             return services;
         }
     }

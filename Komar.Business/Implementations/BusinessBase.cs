@@ -72,5 +72,14 @@ namespace Komar.Business.Implementations
             if(obj == null)
                 throw new NotFoundException(EntityName, id);
         }
+
+        protected void HandleDuplicateNameException(DbUpdateException ex, string name)
+        {
+            var inner = ex.InnerException as MySql.Data.MySqlClient.MySqlException;
+            if (inner.Number == 1062)
+                throw new BadRequestException($"${EntityName} with name \"{name}\" already exists.");
+
+            throw ex;
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Komar.Shared.Dtos.Brand;
 using Komar.Shared.Dtos.Category;
+using Komar.Shared.Dtos.EmployeeType;
 using Komar.Shared.Dtos.Material;
 using Komar.Shared.Entities;
 
@@ -13,6 +14,7 @@ namespace Komar.Business
             CategoryProfile();
             BrandProfile();
             MaterialProfile();
+            EmployeeTypeProfile();
         }
 
         private void CategoryProfile()
@@ -31,6 +33,12 @@ namespace Komar.Business
         {
             CreateMap<MaterialFormDto, Material>();
             CreateMap<Material, MaterialDetailDto>();
+        }
+
+        private void EmployeeTypeProfile()
+        {
+            CreateMap<EmployeeTypeFormDto, EmployeeType>();
+            CreateMap<EmployeeType, EmployeeTypeDto>();
         }
     }
 }

@@ -19,29 +19,29 @@ namespace Komar.API.Controllers
         [HttpGet()]
         public async Task<IActionResult> GetBrands()
         {
-            var categories = await _brandBusiness.GetBrandsAsync();
-            return Ok(categories);
+            var brands = await _brandBusiness.GetBrandsAsync();
+            return Ok(brands);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetBrand(int id)
         {
-            var Brand = await _brandBusiness.GetBrandAsync(id);
-            return Ok(Brand);
+            var brand = await _brandBusiness.GetBrandAsync(id);
+            return Ok(brand);
         }
 
         [HttpPost()]
         public async Task<IActionResult> CreateBrand(BrandFormDto dto)
         {
-            var Brand = await _brandBusiness.CreateBrandAsync(dto);
-            return CreatedAtAction(nameof(GetBrand), new { Brand.Id }, Brand);
+            var brand = await _brandBusiness.CreateBrandAsync(dto);
+            return CreatedAtAction(nameof(GetBrand), new { brand.Id }, brand);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateBrand(int id, BrandFormDto dto)
         {
-            var Brand = await _brandBusiness.UpdateBrandAsync(id, dto);
-            return Ok(Brand);
+            var brand = await _brandBusiness.UpdateBrandAsync(id, dto);
+            return Ok(brand);
         }
 
         [HttpDelete("{id}")]

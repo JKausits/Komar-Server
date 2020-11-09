@@ -17,6 +17,7 @@ namespace Komar.DataAccess
         #region Db Sets
         public DbSet<Category> Categories { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<EmployeeType> EmployeeTypes { get; set; }
         public DbSet<Material> Materials { get; set; }
         #endregion
 
