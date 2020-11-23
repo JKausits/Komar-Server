@@ -1,4 +1,5 @@
-﻿using Komar.Shared.Dtos.EmployeeType;
+﻿using Komar.Shared.Dtos.EmployeeRate;
+using Komar.Shared.Dtos.EmployeeType;
 using Komar.Shared.Interfaces.Business;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -10,10 +11,12 @@ namespace Komar.API.Controllers
     public class EmployeeTypeController : ControllerBase
     {
         private readonly IEmployeeTypeBusiness _employeeTypeBusiness;
+        private readonly IEmployeeRateBusiness _employeeRateBusiness;
 
-        public EmployeeTypeController(IEmployeeTypeBusiness employeeTypeBusiness)
+        public EmployeeTypeController(IEmployeeTypeBusiness employeeTypeBusiness, IEmployeeRateBusiness employeeRateBusiness)
         {
             _employeeTypeBusiness = employeeTypeBusiness;
+            _employeeRateBusiness = employeeRateBusiness;
         }
 
         [HttpGet()]
@@ -50,5 +53,42 @@ namespace Komar.API.Controllers
             await _employeeTypeBusiness.DeleteEmployeeTypeAsync(id);
             return NoContent();
         }
+
+        #region Private
+        [HttpGet("{id}/rate")]
+        public async Task<IActionResult> GetEmployeeTypeRates(int id)
+        {
+            var rates = await _employeeRateBusiness.GetEmployeeTypeRatesAsync(id);
+            return Ok(rates);
+        }
+
+        [HttpGet("rate/{id}")]
+        public async Task<IActionResult> GetEmployeeRate(int id)
+        {
+            var rate = await _employeeRateBusiness.GetEmployeeRateAsync(id);
+            return Ok(rate);
+        }
+
+        [HttpPost("{id}/rate")]
+        public async Task<IActionResult> CreateEmployeeTypeRate(int id, EmployeeRateFormDto dto)
+        {
+            var rate = await _employeeRateBusiness.CreateEmployeeRateAsync(id, dto);
+            return CreatedAtAction(nameof(GetEmployeeRate), new { rate.Id }, rate);
+        }
+
+        [HttpPut("rate/{id}")]
+        public async Task<IActionResult> UpdateEmployeeRate(int id, EmployeeRateFormDto dto)
+        {
+            var rate = await _employeeRateBusiness.UpdateEmployeeRateAsync(id, dto);
+            return Ok(rate);
+        }
+
+        [HttpDelete("rate/{id}")]
+        public async Task<IActionResult> DeleteEmployeeRate(int id)
+        {
+            await _employeeRateBusiness.DeleteEmployeeRateAsync(id);
+            return NoContent();
+        }
+        #endregion
     }
 }

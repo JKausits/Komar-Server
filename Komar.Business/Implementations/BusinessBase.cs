@@ -27,9 +27,14 @@ namespace Komar.Business.Implementations
         public async Task<R> AddAsync<R>(object obj)
         {
             var entity = Mapper.Map<T>(obj);
+            await AddAsync(entity);
+            return Mapper.Map<R>(entity);
+        }
+
+        public async Task AddAsync(T entity)
+        {
             Set.Add(entity);
             await Context.SaveChangesAsync();
-            return Mapper.Map<R>(entity);
         }
 
         public async Task<R> UpdateAsync<R>(int id, object obj)
